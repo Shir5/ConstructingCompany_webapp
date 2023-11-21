@@ -1,0 +1,20 @@
+body{
+    font-family: Poppins;
+}
+
+.header{
+    overflow:hidden;
+    background-color: #111338;
+    padding: 20px 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f0f8ff;
+    display: flex;
+    justify-content: space-between;
+
+}
+.menu{
+float: right;
+
+}
+
