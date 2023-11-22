@@ -1,20 +1,93 @@
 body{
     font-family: Poppins;
+    --main-bg-color: #f0f8ff;
 }
 
 .header{
     overflow:hidden;
     background-color: #111338;
+    border-radius: 10px;
     padding: 20px 10px;
     font-size: 30px;
     font-weight: bold;
-    color: #f0f8ff;
+    color: var(--main-bg-color);
     display: flex;
     justify-content: space-between;
-
 }
-.menu{
-float: right;
 
+#company-name{
+    justify-content: left;
+}
+
+.menu{
+justify-content: right;
+}
+
+#about-us a{
+    text-decoration: none;
+}
+#about-us a:visited{
+    text-decoration: none;
+    color: var(--main-bg-color);
+}
+
+#our-projects{
+    margin-left: 1em;
+}
+#our-projects a{
+    text-decoration: none;
+}
+#our-projects a:visited{
+    text-decoration: none;
+    color: var(--main-bg-color);
+}
+#contact-us{
+    margin-left: 1em;
+}
+#contact-us a{
+    text-decoration: none;
+}
+#contact-us a:visited{
+    text-decoration: none;
+    color: var(--main-bg-color);
+}
+
+.about-section{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    border-style: solid;
+    border-radius: 10px;
+    border-color:#111338;
+    border-width: 5px;
+    margin-inline: 1em;
+    padding: 1em;
+    text-align: center;
+    background-color: #111338;
+    color: var(--main-bg-color);    
+}
+
+#about-us-paragraph{
+    white-space: pre-line;
+    margin: 0 auto;
+    overflow: hidden;
+    border-right: .15em solid var(--main-bg-color);
+    border-left: .15em solid var(--main-bg-color);
+    animation: typing 3.5s steps(1869, end) , blink-caret .5s step-end 100s;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  /* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--main-bg-color) }
+}
+
+#about-us-heading{
+    padding-left: 2em;
 }
 
