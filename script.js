@@ -5,7 +5,39 @@ document.addEventListener("DOMContentLoaded", function () {
     lines.forEach((line, index) => {
     const span = document.createElement("span");
     span.innerHTML = line;
-    span.style.animationDelay = `${index * 3.5}s`;
+    span.style.animationDelay = `${index *1.2}s`;
     textElement.appendChild(span);
     });
 });
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    slider(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    slider(slideIndex = n);
+}
+function slider(n){
+    let i;
+    let slides = document.getElementsByClassName("slider-container");
+
+    if (n > slides.length) {
+        slideIndex = 1;
+      }
+      
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    slides[slideIndex - 1].style.display = "block";
+
+}
