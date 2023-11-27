@@ -29,11 +29,24 @@ function slider(n) {
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("about-section");
     const textElement = document.getElementById("about-us-paragraph");
-    const lines = textElement.innerHTML.split("\n");
+    const lines = textElement.innerHTML.split(`\n`);
     lines.forEach((line, index) => {
         const span = document.createElement("span");
         span.innerHTML = line;
         span.style.animationDelay = `${index * 1.2}s`;
         textElement.appendChild(span);
     });
+
+    const observer = new IntersectionObserver((entries) =>{
+        entries.forEach((entry)=>{
+            console.log(entry)
+            if(entry.isIntersecting){
+                entry.target.classList.add('show')
+            }else{
+                entry.target.classList.remove('show')
+            }
+        })
+    })
+    const scrollSection = document.querySelectorAll('.hidden')
+    scrollSection.forEach((el) => observer.observe(el));
 });
