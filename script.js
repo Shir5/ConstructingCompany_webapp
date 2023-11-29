@@ -1,12 +1,10 @@
 let slideIndex = 1;
 slider(slideIndex);
 
-// Next/previous controls
 function plusSlides(n) {
     slider(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
     slider(slideIndex = n);
 }
