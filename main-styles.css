@@ -40,6 +40,7 @@ margin-right: 1em;
 
 #about-us a{
     text-decoration: none;
+    color: var(--main-fg-color);
 }
 #about-us a:visited{
     text-decoration: none;
@@ -51,6 +52,7 @@ margin-right: 1em;
 }
 #our-projects a{
     text-decoration: none;
+    color: var(--main-fg-color);
 }
 #our-projects a:visited{
     text-decoration: none;
@@ -61,6 +63,7 @@ margin-right: 1em;
 }
 #contact-us a{
     text-decoration: none;
+    color: var(--main-fg-color);
 }
 #contact-us a:visited{
     text-decoration: none;
@@ -92,7 +95,7 @@ margin-right: 1em;
     border-right: .15em solid var(--main-fg-color);
     border-left: .15em solid var(--main-fg-color);
     animation: typing 2s steps(1869, end);
-    font-size: clamp(12px, 3vw, 22px); /* Adjust the range as needed */
+    font-size: clamp(12px, 3vw, 22px);
 }
 
 #logo{
@@ -198,3 +201,72 @@ margin-right: 1em;
   #slide1, #slide2, #slide3{
     display: flex;
   }
+
+
+
+  #contact-us-form{
+    margin-top: 40dvh;
+    margin-bottom: 40dvh;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--main-bg-color);
+    border-radius: 10px;
+    padding: 2em;
+    height: 30dvh;
+
+}
+
+.text-section{
+    display: flex;
+    flex: 1;
+    width: 30%;
+    max-width: 600px;
+    height: auto;
+    flex-direction: column;
+}
+
+.text-container{
+    flex: 1;
+    background-color: var(--main-btn-color);
+    border-style: solid;
+    border-radius: 10px;
+    border-color: var(--main-fg-color);
+    margin: 1em;
+}
+
+.message {
+    flex: 2;
+    padding: 10px;
+}
+
+.text-message{
+    position: relative;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-btn-color);
+    border-style: solid;
+    border-radius: 10px;
+    border-color: var(--main-fg-color);     
+    
+}
+
+.submit-button {
+    flex: 1;
+    padding: 10px;
+}
+
+.submit-button button {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button button:hover {
+    background-color: #45a049;
+}
