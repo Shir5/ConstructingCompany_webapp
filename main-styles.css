@@ -22,6 +22,61 @@ body{
     justify-content: space-between;
 }
 
+@media only screen and (max-width: 767px) {
+    .header{
+        display: flex;
+    }
+    
+    .menuItem {
+        display: block;
+        font-size: 1.8rem;
+        color: var(--main-fg-color);
+        text-decoration: none;
+    }
+    .menuItem:hover {
+        text-decoration: underline;
+    }
+    .hamburger {
+        position: sticky;
+        z-index: 100;
+        right: 1em;
+        top:1em;
+        border: var(--main-fg-color) solid 1px;
+        border-radius: 10px;
+        background: var(--main-btn-color);
+        cursor: pointer;
+    }
+    #closeIcon{
+        display: none;
+    }
+        .menu {
+        position: fixed;
+        transform: translateY(-100%);
+        transition: transform 0.2s;
+        top: 0;
+        left: 1em;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        background: black;
+        color: var(--main-fg-color);
+        list-style: none;
+        padding-top: 4em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .showMenu {
+        transform: translateY(0);
+    }
+
+
+    #about-us, #our-projects, #contact-us{
+        padding-left:3em ;
+    }
+}
+
+
 #company-name{
     justify-content: left;
     margin-left: 1em;
@@ -173,28 +228,27 @@ margin-right: 1em;
     display: flex; 
     overflow: hidden;
 
-  }
-  
-  .slider-container img{
+}  
+.slider-container img{
     max-width: 50%;
     margin-bottom: 1em;
-  }
-  @keyframes fade {
+}
+@keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
-  }
+}
 
-  .hidden{
+.hidden{
     opacity: 0;
     transition: all 1s;
-  }
+}
 
-  .show{
+.show{
     opacity: 1;
-  }
+}
 
 
-  .projects{
+.projects{
     white-space: pre-line;
     color: var(--main-fg-color);
     overflow: hidden;
@@ -205,28 +259,27 @@ margin-right: 1em;
     border-left: .15em solid var(--main-fg-color);
     animation: typing 2s steps(1869, end);
     font-size: clamp(12px, 3vw, 22px); 
-  }
+}
 
-  #slide1, #slide2, #slide3{
+#slide1, #slide2, #slide3{
     display: flex;
-  }
+}
 
 
   /* Contact-us section styles */
-  #main-contact-us{
+#main-contact-us{
     margin-top: 30dvh;
     margin-bottom: 30dvh;
 }
 
-  .form-description{
+.form-description{
     color: var(--main-fg-color);
     text-align: center;
     font-size: 50px;
 }
 
-  #contact-us-form{
+#contact-us-form{
     margin-top: 10dvh;
-    margin-bottom: 10dvh;
     display: flex;
     flex-direction: row;
     background-color: var(--main-bg-color);
@@ -247,6 +300,7 @@ margin-right: 1em;
 
 }
 
+/* add responsiveness !!!*/
 .text-container{
     flex: 1;
     background-color: var(--main-btn-color);
@@ -256,7 +310,7 @@ margin-right: 1em;
     margin: 1em;
     margin-left: 0;
     color: var(--main-bg-color);
-    font-size: x-large;
+    font-size: xx-large; 
     scale: 90%;
 }
 
@@ -270,7 +324,7 @@ margin-right: 1em;
     display: flex;
     flex: 1;
     width: 100%;
-    height: 85%;
+    height: 90%;
     background-color: var(--main-btn-color);
     border-style: solid;
     border-radius: 10px;
@@ -312,7 +366,6 @@ margin-right: 1em;
 .construction-footer {
     color: var(--main-bg-color);
     padding: 4em;
-    margin-top: 30em;
     display: flex;
     justify-content: space-around;
     border-top: solid;
