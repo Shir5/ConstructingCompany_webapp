@@ -7,6 +7,9 @@ body{
     box-sizing: border-box;
 }
 
+
+
+/* Header styling */
 .header{
     overflow:hidden;
     background-color: var(--main-bg-color);
@@ -70,6 +73,14 @@ margin-right: 1em;
     color: var(--main-fg-color);
 }
 
+/* About section styling */
+
+#about-us-heading{
+    color: var(--main-fg-color);
+    text-align: center;
+    font-size: 50px;
+}
+
 .about-section{
     margin-top: 10dvh;
     position: relative;
@@ -112,12 +123,7 @@ margin-right: 1em;
 }
 
 
-#about-us-heading, .form-description{
-    color: var(--main-fg-color);
-    text-align: center;
-    font-size: 50px;
-}
-
+/* Our projects section styling */
 
 #our-projects-slider{
     padding-top: 20px; 
@@ -206,6 +212,17 @@ margin-right: 1em;
   }
 
 
+  /* Contact-us section styles */
+  #main-contact-us{
+    margin-top: 30dvh;
+    margin-bottom: 30dvh;
+}
+
+  .form-description{
+    color: var(--main-fg-color);
+    text-align: center;
+    font-size: 50px;
+}
 
   #contact-us-form{
     margin-top: 10dvh;
@@ -216,8 +233,9 @@ margin-right: 1em;
     border-radius: 10px;
     padding: 2em;
     height: 30dvh;
-    font-size:clamp(12px, 3vw, 22px);
+    font-size:22px;
 }
+
 
 .text-section{
     display: flex;
@@ -291,7 +309,50 @@ margin-right: 1em;
 }
 
 
-#main-contact-us{
-    margin-top: 30dvh;
-    margin-bottom: 30dvh;
+.construction-footer {
+    color: var(--main-bg-color);
+    padding: 4em;
+    margin-top: 30em;
+    display: flex;
+    justify-content: space-around;
+    border-top: solid;
+    border-color: var(--main-bg-color);
+}
+.footer-column {
+    width: 15em;
+    text-align: center;
+}
+
+.footer-column h3 {
+    border-bottom: 1px solid var(--main-bg-color);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer-column p {
+    margin-bottom: 8px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 5px;
+}
+
+
+
+/* Responsive styles */
+@media only screen and (max-width: 767px) {
+    .construction-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin-bottom: 2em;
+    }
 }
