@@ -56,17 +56,26 @@ const hamburger= document.querySelector(".hamburger");
 const closeIcon= document.querySelector("#closeIcon");
 const menuIcon = document.querySelector(".menuIcon");
 
+
 function toggleMenu() {
 if (menu.classList.contains("showMenu")) {
     menu.classList.remove("showMenu");
     closeIcon.style.display = "none";
     menuIcon.style.display = "block";
+    hamburger.style.position = "static"; 
 } else {
     menu.classList.add("showMenu");
     closeIcon.style.display = "block";
-    closeIcon.style.position = "fixed";
     menuIcon.style.display = "none";
+    hamburger.style.position = "fixed"; 
 }
+}
+
+function closeMenu() {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+    hamburger.style.position = "static";
 }
 
 hamburger.addEventListener("click", toggleMenu);
