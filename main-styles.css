@@ -53,7 +53,7 @@ body{
     #closeIcon{
         display: none;
     }
-        .menu {
+        nav {
         position: fixed;
         transform: translateX(110%);
         transition: transform 0.3s ease-in-out;;
@@ -86,7 +86,7 @@ body{
     margin-left: 1em;
 }
 
-.menu{
+nav{
 justify-content: right;
 margin-right: 1em;
 }
@@ -206,6 +206,23 @@ margin-right: 1em;
 
 /* Our projects section styling */
 
+
+.slide-left-column{
+    display: flex;
+    flex-direction: column;
+}
+.slide-left-column h3{
+    color: var(--main-fg-color);
+    text-align: center;
+    font-size: 2em;
+}
+.slide-left-column img{
+    max-width: 100%;
+    margin-bottom: 1em;
+}
+
+
+
 #our-projects-slider{
     display: flex;
     padding-top: 20px; 
@@ -254,12 +271,8 @@ margin-right: 1em;
     animation-duration: 1.5s;
     display: flex; 
     overflow: hidden;
-
 }  
-.slider-container img{
-    max-width: 50%;
-    margin-bottom: 1em;
-}
+
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
@@ -286,10 +299,25 @@ margin-right: 1em;
     border-left: .15em solid var(--main-fg-color);
     animation: typing 2s steps(1869, end);
     font-size: clamp(12px, 3vw, 22px); 
+    max-width: 50%;
 }
 
 #slide1, #slide2, #slide3{
     display: flex;
+}
+
+@media only screen and (max-width: 767px) {
+    #slide1, #slide2, #slide3{
+        flex-direction: column;
+        margin-right: 1em;
+    }
+    .projects{
+        max-width: fit-content;
+    }
+    #left-button, #right-button{
+        top:75%;
+        width: 2em;
+    }
 }
 
 
@@ -365,7 +393,6 @@ margin-right: 1em;
     padding: 10px;
     margin-top: 2em;
     margin-left: 0.5em;
-
 }
 
 .submit-button button {
@@ -388,6 +415,42 @@ margin-right: 1em;
     color: var(--main-fg-color);
 }
 
+/* Responsive styles */
+@media only screen and (max-width: 767px) {
+    #contact-us-form{
+        flex-direction: column;
+    }
+    .text-section{
+        width: 100%;
+        align-items: center;
+        justify-content:center;
+        margin-left:0.8em; 
+    }
+    .input-name{
+        width: 100%;
+        text-align: center;
+        margin-right:1.5em; 
+    }
+    #message-input{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-right:1.5em; 
+        padding-bottom: 0;
+    }
+    #contact-us-form{
+        height: max-content;
+    }
+    .text-message{
+        min-height: 5em;
+    }
+    .submit-button{
+        margin-left: 0;
+    }
+    .submit-button button{
+        padding: 30px;
+    }
+}
 
 /* footer section style*/
 .construction-footer {
