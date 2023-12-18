@@ -299,8 +299,9 @@ margin-right: 1em;
     border-left: .15em solid var(--main-fg-color);
     animation: typing 2s steps(1869, end);
     font-size: clamp(12px, 3vw, 22px); 
-    max-width: 50%;
+    max-width: 60%;
 }
+
 
 #slide1, #slide2, #slide3{
     display: flex;
@@ -498,4 +499,9 @@ margin-right: 1em;
     .footer-column {
         margin-bottom: 2em;
     }
+}
+
+::placeholder {
+    color: var(--main-bg-color);
+    opacity: 1;
 }
